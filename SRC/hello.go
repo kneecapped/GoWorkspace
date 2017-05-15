@@ -13,6 +13,8 @@ func main() {
 	printtest()
 	var file_data string = read_file("SRC\\testfile.txt")
 	fmt.Println(file_data)
+	var kyle person = person{"Kyle",26}
+	PrintPerson(kyle)
 }
 
 func printtest()  {
@@ -45,4 +47,13 @@ func int_demo(){
 	fmt.Println(unsigned8)
 	fmt.Println(unsigned16)
 
+}
+
+type person struct {
+	name string
+	age uint8
+}
+
+func PrintPerson (h person) {
+	fmt.Println("Name:",h.name,"Age: ",h.age)
 }
